@@ -27,10 +27,10 @@ function analyseTime(timeStr) {
         //console.log(typeof(t));
         //console.log(t.toJSON());
         if (isValid == null) {
-            console.log("no es valido");
+            //console.log("no es valido");
             dateObj.unix = null;
             dateObj.natural = null;
-            console.log(dateObj);
+            //console.log(dateObj);
         } else {
             var dateNum = t.getTime() / 1000; // "/ 1000" in order to make it seconds (not milliseconds) since January 1, 1970
             //console.log(dateNum);

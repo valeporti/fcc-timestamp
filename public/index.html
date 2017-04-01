@@ -1,0 +1,58 @@
+<!--
+
+index.html
+
+Free Code Camp - APIs
+
+-->
+
+<!DOCTYPE html>
+    
+  <head>
+      
+    <title>Timestamp Microservice</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- http://getbootstrap.com/ -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    
+    <!-- app's own CSS -->
+    <link href="/css/styles.css" rel="stylesheet"/>
+    
+  </head>
+  
+  <body>
+      
+    <div class="page-header">
+      <h1>Timestamp Microservice API</h1>
+    </div>
+    
+    <div class="container">
+        
+      <h2>What is this?</h2>
+     
+      <p>This is a microservice API project for Free Code Camp that is intended to return a date object
+        with both, unix and "readable" date.</p>
+      <p>In order to let it return to you this object, you will have to type an unix or a readable date
+        with url notation. If you put an invalid entry, the object will return <code>null</code> values.</p>
+        
+      <blockcode>
+          <h3>User stories:</h3>
+          <ul>1) I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016)</ul>
+          <ul>2) If it does, it returns both the Unix timestamp and the natural language form of that date.</ul>
+          <ul>3) If it does not contain a date or Unix timestamp, it returns null for those properties.</ul>
+      </blockcode>
+        
+      <h3 id="yo">Usage:</h3>
+      
+      <pre>https://immense-brushlands-3354.herokuapp.com/January 10, 2015</pre>
+      <pre>https://immense-brushlands-3354.herokuapp.com/1420848000</pre>
+      
+      <h3>Example Response:</h3>
+      
+      <pre>{ unix: "1420848000", natural: "January 10, 2015" }</pre>
+      
+    </div>
+  </body>
+</html>

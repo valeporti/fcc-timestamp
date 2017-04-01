@@ -4,6 +4,10 @@ var app = express();
 var url = require('url');
 var mod = require('./module');
 
+//make principal page: 
+app.use(express.static('public'));
+//app.use(express.static('public/css'));
+
 app.get("/:time", function(req, res) { //we ask app to get the thing after "/:" accessing to it as an object
     //var strUrl = req.url; //también se puede: req.originalUrl
     //console.log(req.originalUrl);
