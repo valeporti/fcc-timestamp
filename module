@@ -1,0 +1,42 @@
+//functions to export
+module.exports = {
+    analyseTime
+};
+
+function analyseTime(timeStr) {
+    var dateObj = {};
+    var strftime = require('strftime');
+    var t;
+    //see if it's number
+    if (!isNaN(timeStr)) { //si isNan(arg) devuelve false, significa que es un numero sea en plena forma como string
+        
+        var timeNum = Number(timeStr); //convert string to number
+        //console.log(typeof(timeNum));
+        //console.log(timeNum);
+        t = new Date(timeNum * 1000); //multilpy by 1000 in order to have an argument in milliseconds (that is what actually the constructor takes into account since January 1, 1970)
+        //console.log(t);
+        var dateSt = strftime('%B %d, %Y', t); //https://github.com/samsonjs/strftime
+        console.log(dateSt);
+        dateObj.unix = timeNum;
+        dateObj.natural = dateSt;
+    
+    } else { //it must be of the form December 15, 2015", let's verify it
+        t = new Date(timeStr);
+        var isValid = t.toJSON();
+        //console.log(t);
+        //console.log(typeof(t));
+        //console.log(t.toJSON());
+        if (isValid == null) {
+            console.log("no es valido");
+            dateObj.unix = null;
+            dateObj.natural = null;
+            console.log(dateObj);
+        } else {
+            var dateNum = t.getTime() / 1000; // "/ 1000" in order to make it seconds (not milliseconds) since January 1, 1970
+            //console.log(dateNum);
+            dateObj.unix = dateNum;
+            dateObj.natural = strftime('%B %d, %Y', t);
+        }
+    }
+    return dateObj;
+}
