@@ -1,7 +1,7 @@
 {
   "name": "timestamp",
   "version": "1.0.0",
-  "description": "TimeStamp Microservice is an app intended to return a date in unix form or natural one, starting from a request made directly from the url",
+  "description": "Free Code Camp TimeStamp Microservice is an app intended to return a date in unix form or natural one, starting from a request made directly from the url",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

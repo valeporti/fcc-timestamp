@@ -12,9 +12,9 @@ In order to let it return to you this object, you will have to type an unix or a
 - If it does not contain a date or Unix timestamp, it returns null for those properties.
 
 ## Usage:
-`https://immense-brushlands-3354.herokuapp.com/January 10, 2015`
+`https://timestamp-vp.herokuapp.com/January 10, 2015`
 
-`https://immense-brushlands-3354.herokuapp.com/1420848000`
+`https://timestamp-vp.herokuapp.com/1420848000`
 
 ## Example Response:
 `{ unix: "1420848000", natural: "January 10, 2015" }`
